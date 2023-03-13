@@ -2,6 +2,9 @@
   "name": "pokemon-battle",
   "private": true,
   "version": "1.0.0",
+  "description": "A Pokemon Battle game built with React, Vite, and Styled Components",
+  "author": "Cleber Vasconcelos",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

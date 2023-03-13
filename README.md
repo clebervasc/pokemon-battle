@@ -1,12 +1,7 @@
 # Pokemon Battle v1
-The Pokémon Battle game is a turn-based battle game developed using JavaScript. The game allows two players to select their Pokémon and engage in a battle until one player defeats the other.
 
-Players can select their Pokémon from a drop-down menu that uses an autocomplete feature to suggest options as the player types. The game retrieves information about each Pokémon from the PokeAPI, including its name, sprite, type, moves, and base stats.
+O sistema de Pokemon Battle desenvolvido utiliza o framework Vite para gerenciamento do projeto.
+O sistema utiliza a sintaxe JSX para a criação dos componentes React.
+Para a estilização dos componentes, o sistema utiliza o Styled Components.
 
-During the battle, each player takes turns selecting a move for their Pokémon to use. The game calculates the damage done by each move based on the attacking and defending Pokémon's stats, types, and moves. The battle continues until one player's Pokémon faints, at which point the other player wins.
-
-The game includes a log that displays each turn's actions, including which player's Pokémon attacked, which move they used, and how much damage was dealt. The log also displays which player won the game.
-
-Players can reset the game at any time by clicking a button. The game also includes sound effects when a Pokémon is selected and when a move is used.
-
-The game is styled using CSS, with each Pokémon's type determining the color scheme used in the game's design. The game also includes several animations and effects to enhance the user experience.
+O sistema de batalha de Pokémon utiliza a API pública PokéAPI para buscar informações sobre os pokémons, incluindo nome, imagem e habilidades. Os jogadores escolhem seus pokémons e, em seguida, batalham entre si, realizando ataques e recebendo danos baseados em suas habilidades e tipos. Quando um dos jogadores vence, é exibido um lindo alerta informando sobre a vitória do pokémon.
