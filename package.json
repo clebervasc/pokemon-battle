@@ -5,6 +5,7 @@
   "description": "A Pokemon Battle game built with React, Vite, and Styled Components",
   "author": "Cleber Vasconcelos",
   "license": "MIT",
+  "homepage": "https://clebervasc.github.io/pokemon-battle",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
