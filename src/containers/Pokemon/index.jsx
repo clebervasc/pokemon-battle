@@ -90,7 +90,7 @@ const Pokemon = ({
     selectedPokemon.moves = moves;
 
     setPokemon(selectedPokemon);
-    audio(`../../src/utils/cries/pv${id ?? '001'}.wav`).play();
+    audio(`${api.URLS.POKE_CRIES}${id ?? '001'}.wav?raw=true`).play();
     setLoading(false);
   }
 
