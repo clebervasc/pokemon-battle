@@ -1,4 +1,9 @@
-const POKEAPI_URL = 'https://pokeapi.co/api/v2';
+export const URLS = {
+  POKEAPI_URL: import.meta.env.VITE_POKEAPI,
+  POKE_SPRITE: import.meta.env.VITE_SPRITE,
+  POKE_CRIES: import.meta.env.VITE_CRIES,
+};
+
 export const generations = [
   { name: 'Generation I', offset: 0, limit: 151 },
   { name: 'Generation II', offset: 151, limit: 100 },
@@ -12,16 +17,18 @@ export const generations = [
 
 export const listAll = (generation = 0) => {
   const { offset, limit } = generations[generation];
-  return fetch(`${POKEAPI_URL}/pokemon?offset=${offset}&limit=${limit}`).then(
-    response => response.json(),
-  );
+  return fetch(
+    `${URLS.POKEAPI_URL}/pokemon?offset=${offset}&limit=${limit}`,
+  ).then(response => response.json());
 };
 export const pokemonByName = name =>
-  fetch(`${POKEAPI_URL}/pokemon/${name}`).then(response => response.json());
+  fetch(`${URLS.POKEAPI_URL}/pokemon/${name}`).then(response =>
+    response.json(),
+  );
 export const moveByUrl = moveUrl =>
   fetch(moveUrl).then(response => response.json());
 export const moveByName = moveName =>
-  fetch(`${POKEAPI_URL}/move/${moveName}`).then(response => response.json());
-export const pokemonImg = id => `
-  https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png
-`;
+  fetch(`${URLS.POKEAPI_URL}/move/${moveName}`).then(response =>
+    response.json(),
+  );
+export const pokemonImg = id => `${URLS.POKE_SPRITE}/${id}.png`;
